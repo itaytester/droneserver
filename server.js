@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const http = require('http');
-const cors = require('cors');
+//const cors = require('cors');
 const app = express();
 const port = process.env.PORT || 1337;
 
@@ -14,8 +14,8 @@ db.once('open', () => {                                                 // on co
 });
 
 app.set('maxDroneTail', 5)
-app.use(cors())                                                         // use the cors module
-app.use('/api/Drones', require('./api/drones.js'));                     // register the drone controller on /api/Drones/ route
+//app.use(cors())                                                         // use the cors module
+app.use('/api/Drones', require('./api/dronesController')(mongoose));                     // register the drone controller on /api/Drones/ route
 
 app.listen(port, () => {                                                // listen to port
     console.log("listening in port " + port);
