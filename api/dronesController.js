@@ -16,10 +16,10 @@ module.exports = (mongoose) => {
                 res.send(drones);
             });
         })
-        .post('/insert', (req, res) => {
+        .post('/Insert', (req, res) => {
             var drone = req.body;
             Drone.create(drone, (err, result) => {
-                if (err) res.status(500).send('Error upon insertation');
+                if (err) res.status(500).send('Error upon inseration');
                 res.send(result);
             });
         })

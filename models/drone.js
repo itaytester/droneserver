@@ -1,14 +1,6 @@
 module.exports = (mongoose) => {
-  
-  //const mongoose = require('mongoose');
-  const Schema = mongoose.Schema;
 
-  // mongoose.connect('mongodb://localhost/mydb');                           // connect mongoose to db
-  // var db = mongoose.connection;                                           // get connection
-  // db.on('error', console.error.bind(console, 'connection error:'));       // on error listener
-  // db.once('open', () => {                                                 // on connection established
-  //   console.log('connected to MongoDB database: mydb');
-  // });
+  const Schema = mongoose.Schema;
 
   var DroneSchema = new Schema({
     user_id: String,
