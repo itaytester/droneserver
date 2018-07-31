@@ -63,5 +63,3 @@ module.exports = (mongoose) => {
 
     return router;
 }
-
-//module.exports = router;
